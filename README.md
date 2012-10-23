@@ -16,7 +16,9 @@ Once you have installed the Haskell platform (http://www.haskell.org/platform/),
 	mkdir build
 	ghc Main.hs -o build/ratc -hidir build -odir build
 
-Once done, the compiler, _ratc_, will be available in the _build_ directory.
+Once done, the compiler, _ratc_, will be available in the _build_ directory. Note that if some package are missing, the package manager of the Haskell platform, _cabal_, can be used to install them, as follows:
+
+	cabal install <missing package>
 
 Building the VM
 ===============
