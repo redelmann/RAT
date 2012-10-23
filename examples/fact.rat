@@ -1,0 +1,15 @@
+
+
+def fact(x: int): int {
+	def rec f(a: int, x: int): int {
+		if(x > 0) {
+			f(a*x, x-1)
+		} else {
+			a
+		}
+	}
+
+	f(1, x)
+}
+
+!fact(?)

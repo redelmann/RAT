@@ -1,0 +1,24 @@
+
+def askValuesUntilSmaller(x: float): {float, float} {
+	def rec f(a: {float, float}): {float, float} {
+		let v : float = ?
+
+		if(v < x) {
+			a
+		} else {
+			f({a._1 + v, a._2 + 1.})
+		}
+	}
+
+	f({0., 0.})
+}
+
+let vs : {float, float} = askValuesUntilSmaller(0.)
+
+let v : float = try {
+	(vs._1 / vs._2)
+} catch (divisionByZero) {
+	0.
+}
+
+!(v)

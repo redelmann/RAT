@@ -1,0 +1,35 @@
+	def rec zip(xs: [int], ys: [int]): [{int, int}] {
+		if(empty(xs) | empty(ys)) {
+			[]
+		} else {
+			{head(xs), head(ys)} :: zip(tail(xs), tail(ys))
+		}
+	}
+
+	def rec askValues(howMany: int): [int] {
+		if(howMany > 0) {
+			? :: askValues(howMany - 1)
+		}
+		else {
+			[]
+		}
+	}
+
+	def rec showAll(xs: [{int, int}]): [{int, int}] {
+		if(empty(xs)) {
+			[]
+		} else {
+			let h : {int, int} = head(xs)
+			let f : int = !h._1
+			let s : int = !h._2
+			let ts : [{int, int}] = tail(xs)
+
+			showAll(ts)
+		}
+	}
+
+	let n : int = ?
+	let vs : [int] = askValues(n)
+	let ks : [int] = askValues(n)
+
+	showAll(zip(vs, ks))
