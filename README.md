@@ -3,7 +3,7 @@ RAT
 
 _RAT_ is a toy programming language that has closures, lists, tuples, integers, floats and booleans.
 
-_RAT_ comes with a compiler in Haskell, called _ratc_, and a virtual machine in C, called _ratvm_. They virtual machine is carbage collected. Tail call reduction is also performed.
+_RAT_ comes with a compiler in Haskell, called _ratc_, and a virtual machine in C, called _ratvm_, that implements carbage collection. Tail call reduction is also performed.
 
 How to build
 ============
